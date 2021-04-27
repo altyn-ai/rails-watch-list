@@ -1,0 +1,27 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1574267432309-3c7d5ed31b9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80)">
+  <h1>Save any kind of movies</h1>
+</div>
+
+<div class="container py-5">
+  <div class="container d-flex justify-content-between py-3">
+    <h2>My watch lists</h2>
+    <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
+    <!-- <a class="btn btn-flat" href="#">Create a movie list</a> -->
+  </div>
+
+
+  <div class="cards">
+
+    <% @lists.each do |list| %>
+
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.poster_url %>)">
+      <%= link_to  list.name, list_path(list) %>
+    </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+

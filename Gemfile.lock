@@ -94,6 +94,9 @@ GEM
     nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
+    pg_search (2.3.5)
+      activerecord (>= 5.2)
+      activesupport (>= 5.2)
     puma (4.3.7)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -163,6 +166,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.0.13)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -210,11 +214,13 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
+  pg_search (~> 2.3.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.5)
   rails-controller-testing
   rspec-rails
   sass-rails (>= 6)
+  select2-rails
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
